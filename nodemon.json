@@ -1,0 +1,8 @@
+{
+  "ignore": [
+    "__tests__/*",
+    "static/*",
+    "dist/*"
+  ],
+  "ext": "js,json5"
+}
