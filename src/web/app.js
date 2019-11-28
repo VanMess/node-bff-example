@@ -9,6 +9,7 @@ import errorHandler from './middlewares/error-handler';
 import notFoundHandler from './middlewares/not-found';
 import logHandler from './middlewares/log';
 import routers from './routers';
+import genAuthHandler from './middlewares/authentication';
 
 /**
  * Creates and returns a new Koa application.
@@ -26,11 +27,13 @@ export default async function createServer() {
     .use(errorHandler)
     // Adds ctx.ok(), ctx.notFound(), etc..
     .use(respond())
-    // Compress all responses.
-    .use(compress())
-    .use(routers.routes())
     // Parses request bodies.
     .use(bodyParser())
+    // Compress all responses.
+    .use(compress())
+    // JWT token validation
+    .use(genAuthHandler({ includes: [/^\/api/] }))
+    .use(routers.routes())
     // Default handler when nothing stopped the chain.
     .use(notFoundHandler);
 

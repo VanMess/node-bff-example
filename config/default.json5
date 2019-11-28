@@ -1,4 +1,10 @@
 {
   lOG_LEVEL: 'info',
-  PORT: '8080'
+  PORT: '8080',
+  BACKEND: {
+    USER_MANAGER: 'http://demo3533033.mockable.io/',
+    ROLE_MANAGER: 'http://demo3533033.mockable.io/'
+  },
+  JWT_SECRET: 'just test',
+  EMIT_STACK_TRACE: true
 }
