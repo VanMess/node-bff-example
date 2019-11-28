@@ -28,9 +28,9 @@ export default async function errorHandler(ctx, next) {
         : {
             message: err.message,
             status: ctx.status,
-            ...err
+            stack: err.stack
           };
-      if (!config.get('EMIT_STACK_TRACE')) {
+      if (process.env.NODE_ENV === 'production') {
         delete ctx.body.stack;
       }
       exception = err;
