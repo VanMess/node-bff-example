@@ -21,18 +21,21 @@ export default function genAuth(opt = {}) {
   const options = _.extend({ includes: [], excludes: [] }, opt);
 
   return async function authMiddleware(ctx, next) {
+    // !1. 从 authorization 头部读取token
     const authToken = ctx.req.headers.authorization;
     let isTokenValid = false;
+    // !2. 空值判断
     if (_.isString(authToken) && authToken.length > 0) {
       const token = authToken.replace('Bearer ', '');
+      // !3. 解码 jwt 串
       const {
         // retrive signate algorithm
         header: { alg },
         payload
       } = jws.decode(token);
+      // !4. [重要] 使用安全秘钥验证签名有效性
       isTokenValid = jws.verify(token, alg, config.get('JWT_SECRET'));
       if (isTokenValid) {
-        // attach payload information in the session
         ctx.currentUser = payload;
       }
     }
