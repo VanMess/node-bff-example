@@ -8,6 +8,7 @@ import logger from '../../lib/logger';
  * Uses status code from error if present.
  */
 export default async function errorHandler(ctx, next) {
+  // ! Catch uncaught exceptions and format that.
   try {
     await next();
   } catch (err) {
@@ -21,9 +22,7 @@ export default async function errorHandler(ctx, next) {
       ctx.body = data;
       exception = new StandarError({ status, message: data });
     } else {
-      /* istanbul ignore next */
       ctx.status = err.statusCode || err.status || 500;
-      /* istanbul ignore next */
       ctx.body = err.toJSON
         ? err.toJSON()
         : {
@@ -31,7 +30,6 @@ export default async function errorHandler(ctx, next) {
             status: ctx.status,
             ...err
           };
-      /* istanbul ignore next */
       if (!config.get('EMIT_STACK_TRACE')) {
         delete ctx.body.stack;
       }
