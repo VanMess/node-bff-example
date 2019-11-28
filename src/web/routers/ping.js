@@ -2,8 +2,6 @@ import Router from 'koa-router';
 
 const route = new Router();
 
-route.get('/ping', (ctx) => ctx.ok('pong'));
-
-route.get('/', (ctx) => ctx.ok('Hello World'));
+route.get('/api/ping', (ctx) => ctx.ok('pong'));
 
 export default route;

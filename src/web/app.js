@@ -9,7 +9,8 @@ import errorHandler from './middlewares/error-handler';
 import notFoundHandler from './middlewares/not-found';
 import logHandler from './middlewares/log';
 import routers from './routers';
-import genAuthHandler from './middlewares/authentication';
+import authHandler from './middlewares/authentication';
+import staticHandler from './middlewares/static';
 
 /**
  * Creates and returns a new Koa application.
@@ -32,7 +33,9 @@ export default async function createServer() {
     // Compress all responses.
     .use(compress())
     // JWT token validation
-    .use(genAuthHandler({ includes: [/^\/api/] }))
+    .use(authHandler({ includes: [/^\/api/] }))
+    // Register static handler before rest routers
+    .use(staticHandler())
     .use(routers.routes())
     // Default handler when nothing stopped the chain.
     .use(notFoundHandler);
