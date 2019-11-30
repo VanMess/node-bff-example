@@ -18,10 +18,10 @@ then
   npm run changelog
 
   # build docker
-  docker build -t node-bff-example:V$VERSION .
+  docker build -t node-bff-example:$VERSION .
   # push docker image to private docker repository
-  # docker push node-bff-example:V$VERSION
-  # docker tag node-bff-example:V$VERSION node-bff-example:latest
+  # docker push node-bff-example:$VERSION
+  # docker tag node-bff-example:$VERSION node-bff-example:latest
   # docker push node-bff-example:latest
 
   # update git
