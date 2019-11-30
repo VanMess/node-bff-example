@@ -29,6 +29,7 @@ export default async function createServer() {
     // Adds ctx.ok(), ctx.notFound(), etc..
     .use(respond())
     // Parses request bodies.
+    // https://www.npmjs.com/package/koa-bodyparser
     .use(bodyParser())
     // Compress all responses.
     .use(compress())

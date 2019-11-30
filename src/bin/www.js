@@ -1,5 +1,6 @@
-// import 'regenerator-runtime/runtime';
 import config from 'config';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import logger from '../lib/logger';
 import createServer from '../web/app';
 

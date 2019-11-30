@@ -16,6 +16,7 @@
     "axios": "^0.19.0",
     "bristol": "^0.4.0",
     "config": "^3.2.4",
+    "core-js": "^3.4.5",
     "fs-extra": "^8.1.0",
     "http-status-codes": "^1.4.0",
     "jws": "^3.2.2",
@@ -27,6 +28,7 @@
     "koa-send": "^5.0.0",
     "lodash": "^4.17.15",
     "palin": "^2.3.0",
+    "regenerator-runtime": "^0.13.3",
     "standard-error": "^1.1.0"
   },
   "devDependencies": {
