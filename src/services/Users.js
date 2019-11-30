@@ -1,6 +1,7 @@
 import config from 'config';
 import createAxios from '../lib/createAxios';
 
+// Mock API from https://www.mockable.io/a/#/space/demo3533033/rest
 const BACKEND_USERS = config.get('BACKEND.USER_MANAGER');
 const BACKEND_ROLES = config.get('BACKEND.ROLE_MANAGER');
 
