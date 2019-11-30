@@ -1,3 +1,12 @@
+## <small>0.0.3 (2019-11-30)</small>
+
+* 0.0.3 ([d1c2969](https://github.com/VanMess/node-bff-example/commit/d1c2969))
+* fix: building error ([3a9d1ac](https://github.com/VanMess/node-bff-example/commit/3a9d1ac))
+* fix: use ali registry ([09408b4](https://github.com/VanMess/node-bff-example/commit/09408b4))
+* docs(dashboard): version bump to ([f93a310](https://github.com/VanMess/node-bff-example/commit/f93a310))
+
+
+
 ## <small>0.0.2 (2019-11-30)</small>
 
 * 0.0.2 ([994ae7d](https://github.com/VanMess/node-bff-example/commit/994ae7d))
