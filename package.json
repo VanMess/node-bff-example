@@ -5,7 +5,8 @@
   "main": "src/bin/www.js",
   "scripts": {
     "dev": "NODE_ENV=development npx nodemon --exec babel-node src/bin/www",
-    "build": "rimraf dist && cross-env NODE_ENV=production babel src -d dist -s",
+    "start": "npx pm2 start ecosystem.config.js --no-daemon",
+    "build": "rimraf dist && cross-env NODE_ENV=production babel src -d dist -s && cp -r src/static dist/static",
     "lint": "eslint --ext .js src"
   },
   "engines": {
