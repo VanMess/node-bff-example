@@ -8,11 +8,7 @@
     "dev": "NODE_ENV=development npx nodemon --exec babel-node src/bin/www",
     "start": "npx pm2 start ecosystem.config.js --no-daemon",
     "build": "rimraf dist && cross-env NODE_ENV=production babel src -d dist -s && cp -r src/static dist/static",
-    "lint": "eslint --ext .js src",
-    "release": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs: updated CHANGELOG.md' && git push origin && git push origin --tags",
-    "release:major": "npm version major && npm run release",
-    "release:minor": "npm version minor && npm run release",
-    "release:patch": "npm version patch && npm run release"
+    "lint": "eslint --ext .js src"
   },
   "engines": {
     "node": ">=8.10.0",
