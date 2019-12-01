@@ -32,9 +32,9 @@ export default async function createServer() {
     // https://www.npmjs.com/package/koa-bodyparser
     .use(bodyParser())
     // Compress all responses.
-    .use(compress())
+    .use(compress({ threshold: 1024 }))
     // JWT token validation
-    .use(authHandler({ includes: [/^\/api/] }))
+    .use(authHandler({ includes: [/^\/api/], excludes: [/^\/api\/ping/] }))
     // Register static handler before rest routers
     .use(staticHandler())
     .use(routers.routes())

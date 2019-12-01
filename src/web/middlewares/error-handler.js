@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import config from 'config';
 import StandarError from 'standard-error';
 import logger from '../../lib/logger';
 

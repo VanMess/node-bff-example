@@ -17,7 +17,9 @@ export default class BizUsers {
     } = await axios.get(`${BACKEND_USERS}/v1/users`);
     const payload = await Promise.all(
       users.map(async (user) => {
-        const { data: roles } = await axios.get(`${BACKEND_ROLES}/v1/users/${user.id}/roles`);
+        const {
+          data: { data: roles }
+        } = await axios.get(`${BACKEND_ROLES}/v1/users/${user.id}/roles`);
         return { ...user, roles };
       })
     );
