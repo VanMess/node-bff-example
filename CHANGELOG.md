@@ -1,3 +1,10 @@
+## <small>0.0.5 (2019-12-08)</small>
+
+* 0.0.5 ([01cebcf](https://github.com/VanMess/node-bff-example/commit/01cebcf))
+* tmp ([faeabde](https://github.com/VanMess/node-bff-example/commit/faeabde))
+
+
+
 ## <small>0.0.4 (2019-12-08)</small>
 
 * 0.0.4 ([eb8b01e](https://github.com/VanMess/node-bff-example/commit/eb8b01e))
