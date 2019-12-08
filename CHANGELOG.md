@@ -1,3 +1,11 @@
+## <small>0.0.4 (2019-12-08)</small>
+
+* 0.0.4 ([eb8b01e](https://github.com/VanMess/node-bff-example/commit/eb8b01e))
+* chore: slightly change for the show ([b60679d](https://github.com/VanMess/node-bff-example/commit/b60679d))
+* docs(dashboard): version bump to v0.0.3 ([6346259](https://github.com/VanMess/node-bff-example/commit/6346259))
+
+
+
 ## <small>0.0.3 (2019-11-30)</small>
 
 * 0.0.3 ([d1c2969](https://github.com/VanMess/node-bff-example/commit/d1c2969))
